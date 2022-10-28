@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
+    <title>Document</title>
+</head>
+<body>
+<div class="main-wrapper">
+    <div class="content-wrapper">
+        <header>
+            <h1 class="logo">Teachinder</h1>
+            <form>
+                <input class="searcher" type="text" name="search_name" placeholder="Name, note or age to search" >
+                <input class="search-btn" type="submit" value="Search">
+            </form>
+        </header>
+        <div class="func nav-links">
+            <nav class="navigation">
+
+                <a href="#top-teachers" >Teachers</a>
+                <a href="#statistics-table">Statistics</a>
+                <a href="#fav">Favorites</a>
+                <a href="#about">About</a>
+
+            </nav>
+            <label class="add-teacher" onclick="addForm()">
+                Add teacher
+            </label>
+        </div>
+        <hr>
+        <h2 class="headers">Top Teachers</h2>
+        <div class="top-teachers" id="top-teachers">
+            <form>
+                <label for="ages">Age:</label>
+                <select id="ages">
+                    <option value="young">18-31</option>
+                    <option value="middleaged">32-50</option>
+                    <option value="elder">51-65</option>
+                </select>
+
+                <div class="line-vertical"></div>
+
+                <label for="regions">Region:</label>
+                <select id="regions">
+
+                    <option value="africa">Africa</option>
+                    <option value="america">America</option>
+                    <option value="asia">Asia</option>
+                    <option value="europe">Europe</option>
+                    <option value="oceania">Oceania</option>
+                </select>
+                <div class="line-vertical"></div>
+
+                <label for="sex">Sex</label>
+                <select id="sex">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                <div class="line-vertical"></div>
+
+                <input class="with-photo" type="checkbox" id="photo" name="photo"  >
+                <label class="left-label-check" for="photo">Only with photo</label>
+
+                <div class="line-vertical"></div>
+                <input class="favorites" type="checkbox" id="favorites" name="favorites"  >
+                <label for="favorites">Only favorites</label>
+
+            </form>
+            <ul class="teacher-list">
+
+                <li class="person-info favorite">
+                    <figure class="person">
+                        <div class="img-wrapper">
+                            <img class="img" src="img/teacher2.png" alt="I.T" onclick="infoForm()">
+                        </div>
+                        <figcaption>Ihor<br>Tkachuk</figcaption>
+                    </figure>
+                    <div class="subject">Chemistry</div>
+                    <div class="country">Ukraine</div>
+                </li>
+                <li class="person-info">
+                    <figure class="person">
+                        <div class="img-wrapper">
+                            <img class="img" src="img/teacher6.png" alt="P.R">
+                        </div>
+                        <figcaption>Pragg<br>Rameshbabu</figcaption>
+                    </figure>
+                    <div class="subject">Chess</div>
+                    <div class="country">India</div>
+                </li>
+                <li class="person-info favorite">
+                    <figure class="person">
+                        <div class="img-wrapper">
+                            <img class="img" src="img/teacher1.png" alt="F.J">
+                        </div>
+
+                        <figcaption>Floor<br>Jansen</figcaption>
+                    </figure>
+                    <div class="subject">Vocal</div>
+                    <div class="country">Denmark</div>
+                </li>
+                <li class="person-info favorite">
+                    <figure class="person">
+                        <div class="img-wrapper">
+                            <img class="img" src="img/teacher3.png" alt="J.B">
+                        </div>
+
+                        <figcaption>John<br>Bruke</figcaption>
+                    </figure>
+                    <div class="subject">Computer Science</div>
+                    <div class="country">Belgium</div>
+                </li>
+                <li class="person-info">
+                    <figure class="person">
+                        <div class="img-wrapper">
+                            <img class="img" src="img/teacher4.png" alt="A.T">
+                        </div>
+                        <figcaption>Ari<br>Tang</figcaption>
+                    </figure>
+                    <div class="subject">Biology</div>
+                    <div class="country">China</div>
+                </li>
+                <li class="person-info">
+                    <figure class="person">
+                        <div class="img-wrapper">
+                            <img class="img" src="img/teacher5.png" alt="R.A">
+                        </div>
+                        <figcaption>Rachel<br>Andrew</figcaption>
+                    </figure>
+                    <div class="subject">Medicine</div>
+                    <div class="country">UK</div>
+                </li>
+                <li class="person-info">
+                    <figure class="person">
+                        <div class="img-wrapper">
+                            A.M
+                        </div>
+                        <figcaption>Anna<br>Muzychuk</figcaption>
+                    </figure>
+                    <div class="subject">Chess</div>
+                    <div class="country">Belarus</div>
+                </li>
+                <li class="person-info favorite">
+                    <figure class="person">
+                        <div class="img-wrapper">
+                            R.L
+                        </div>
+                        <figcaption>Radoslaw<br>Ljuboevic</figcaption>
+                    </figure>
+                    <div class="subject">Physics</div>
+                    <div class="country">Poland</div>
+                </li>
+            </ul>
+        </div>
+
+
+        <hr>
+        <h2 class="headers">Statistics</h2>
+        <table class="statistics-table" id="statistics-table">
+            <thead>
+            <tr class="columns">
+                <th class="name-coll"><h4>Name</h4></th>
+                <th ><h4>Speciality</h4></th>
+                <th ><h4>Age</h4></th>
+                <th ><h4>Gender</h4></th>
+                <th ><h4>Nationality</h4></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="odd">
+                <td class="name-coll">SDaisy Alexander</td>
+                <td>Chemistry</td>
+                <td>28</td>
+                <td>Female</td>
+                <td>Vietnam</td>
+            </tr>
+            <tr class="even">
+                <td class="name-coll">Julia Bradley</td>
+                <td>Math</td>
+                <td>26</td>
+                <td>Female</td>
+                <td>USA</td>
+            </tr>
+            <tr class="odd">
+                <td class="name-coll">Rita Hart</td>
+                <td>Art</td>
+                <td>41</td>
+                <td>Female</td>
+                <td>Ireland</td>
+            </tr>
+            <tr class="even">
+                <td class="name-coll">Jonathan Jacobs</td>
+                <td>Math</td>
+                <td>32</td>
+                <td>Male</td>
+                <td>England</td>
+            </tr>
+            <tr class="odd">
+                <td class="name-coll">Nathaniel White</td>
+                <td>Computer Science</td>
+                <td>37</td>
+                <td>Male</td>
+                <td>Austria</td>
+            </tr>
+            <tr class="even">
+                <td class="name-coll">Frank Medina</td>
+                <td>English</td>
+                <td>43</td>
+                <td>Male</td>
+                <td>Italy</td>
+            </tr>
+            <tr class="odd">
+                <td class="name-coll">Ella Curtis</td>
+                <td>Chess</td>
+                <td>34</td>
+                <td>Female</td>
+                <td>USA</td>
+            </tr>
+            <tr class="even">
+                <td class="name-coll">Claire Simmmons</td>
+                <td>Art</td>
+                <td>38</td>
+                <td>Female</td>
+                <td>Netherlands</td>
+            </tr>
+            <tr class="odd">
+                <td class="name-coll">Benjamin Knight</td>
+                <td>Biology</td>
+                <td>44</td>
+                <td>Male</td>
+                <td>Scotland</td>
+            </tr>
+            <tr class="even">
+                <td class="name-coll">Norma Rose</td>
+                <td>Statistics</td>
+                <td>36</td>
+                <td>Female</td>
+                <td>France</td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="pagination">
+            <a class="current-page">1</a>
+            <a>2</a>
+            <a>3</a>
+            <a>...</a>
+            <a>Last</a>
+        </div>
+        <hr>
+        <h2 class="headers">Favorites</h2>
+        <div class="favorites-wrapper" id="fav">
+            <img class="arrow" src="img/arrow_left.png" alt="arrow_left" onclick="scrlLeft()">
+            <ul class="favorite-teacher-list">
+                <li class="favorite">
+                    <figure class="person">
+                        <div class="img-wrapper">
+                            <img class="img" src="img/teacher2.png" alt="I.T" onclick="infoForm()">
+                        </div>
+                        <figcaption >Ihor<br>Tkachuk</figcaption>
+                    </figure>
+                    <div class="country">Ukraine</div>
+                </li>
+                <li class="favorite">
+                    <figure class="person">
+                        <div class="img-wrapper">
+                            <img class="img"  alt="A.N" src="img/teacher4.png">
+                        </div>
+                        <figcaption>Anna<br>Makarevich</figcaption>
+                    </figure>
+                    <div class="country">Belarus</div>
+                </li>
+                <li class="favorite">
+                    <figure class="person">
+                        <div class="img-wrapper" src="img/teacher3.png">
+                           J.B
+                        </div>
+                        <figcaption>John <br>Burke</figcaption>
+                    </figure>
+                    <div class="country">Belgium</div>
+                </li>
+                <li class="favorite">
+                    <figure class="person">
+                        <div class="img-wrapper">
+                            <img class="img" src="img/teacher4.png" alt="A.T">
+                        </div>
+                        <figcaption>Ari <br>Tang</figcaption>
+                    </figure>
+                    <div class="country">China</div>
+                </li>
+                <li class="favorite">
+                    <figure class="person">
+                        <div class="img-wrapper">
+                            <img class="img" src="img/teacher5.png" alt="F.T">
+                        </div>
+                        <figcaption>Floor<br>Jansen</figcaption>
+                    </figure>
+                    <div class="country">Denmark</div>
+                </li>
+                <li class="favorite">
+                    <figure class="person">
+                        <div class="img-wrapper">
+                            <img class="img"  src="img/teacher5.png"alt="R.L" onclick="infoForm()">
+                        </div>
+                        <figcaption >Radoslaw<br>Ljuboevic</figcaption>
+                    </figure>
+                    <div class="country">Poland</div>
+                </li>
+                <li class="favorite">
+                    <figure class="person">
+                        <div class="img-wrapper">
+                            <img class="img"  alt="A.N" src="img/teacher1.png" >
+                        </div>
+                        <figcaption>Anna<br>Makarevich</figcaption>
+                    </figure>
+                    <div class="country">Belarus</div>
+                </li>
+                <li class="favorite">
+                    <figure class="person">
+                        <div class="img-wrapper" >
+                            J.B
+                        </div>
+                        <figcaption>John <br>Burke</figcaption>
+                    </figure>
+                    <div class="country">Belgium</div>
+                </li>
+                <li class="favorite">
+                    <figure class="person">
+                        <div class="img-wrapper">
+                            <img class="img" src="img/teacher4.png" alt="A.T">
+                        </div>
+                        <figcaption>Ari <br>Tang</figcaption>
+                    </figure>
+                    <div class="country">China</div>
+                </li>
+            </ul>
+            <img class="arrow" src="img/arrow_right.png" alt="arrow_right" onclick="scrlRight()">
+        </div>
+        <hr>
+        <div class="about" id="about">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+        </div>
+        <footer>
+            <div class="func nav-links">
+                <nav class="navigation">
+
+                    <a href="#top-teachers" >Teachers</a>
+                    <a href="#statistics-table">Statistics</a>
+                    <a href="#fav">Favorites</a>
+                    <a href="#about">About</a>
+
+                </nav>
+                <label class="add-teacher" onclick="addForm()">
+                    Add teacher
+                </label>
+            </div>
+        </footer>
+    </div>
+</div>
+<div class="add-popup">
+    <p id="closer" onclick="hideAddForm()">&#10006;  </p>
+    <p id="form-title">  Add Teacher</p>
+    <form class="addForm">
+        <label for="fullName">Name</label><br>
+        <input type="text" name="fullName" id="fullName" placeholder="Enter name"  required><br>
+
+        <label for="speciality">Speciality</label>
+        <select id="speciality">
+            <option value="mathematics">Mathematics</option>
+            <option value="physics">Physics</option>
+            <option value="chemistry">Chemistry</option>
+            <option value="art">Art</option>
+            <option value="english">English</option>
+            <option value="literature">Literature</option>
+            <option value="computerScience">Computer Science</option>
+            <option value="history">History</option>
+            <option value="psychology">Psychology</option>
+            <option value="biology">Biology</option>
+            <option value="geography">Geography</option>
+            <option value="chess">Chess</option>
+            <option value="vocal">Vocal</option>
+            <option value="medicine">Medicine</option>
+
+        </select>
+
+        <label id="countries-label" for="countries">Country</label><br>
+        <label id="cities-label" for="cities">City</label><br>
+        <select id="countries">
+            <option value="Afghanistan">Afghanistan</option>
+            <option value="Åland Islands">Åland Islands</option>
+            <option value="Albania">Albania</option>
+            <option value="Algeria">Algeria</option>
+            <option value="American Samoa">American Samoa</option>
+            <option value="Andorra">Andorra</option>
+            <option value="Angola">Angola</option>
+            <option value="Anguilla">Anguilla</option>
+            <option value="Antarctica">Antarctica</option>
+            <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Armenia">Armenia</option>
+            <option value="Aruba">Aruba</option>
+            <option value="Australia">Australia</option>
+            <option value="Austria">Austria</option>
+            <option value="Azerbaijan">Azerbaijan</option>
+            <option value="Bahamas">Bahamas</option>
+            <option value="Bahrain">Bahrain</option>
+            <option value="Bangladesh">Bangladesh</option>
+            <option value="Barbados">Barbados</option>
+            <option value="Belarus">Belarus</option>
+            <option value="Belgium">Belgium</option>
+            <option value="Belize">Belize</option>
+            <option value="Benin">Benin</option>
+            <option value="Bermuda">Bermuda</option>
+            <option value="Bhutan">Bhutan</option>
+            <option value="Bolivia">Bolivia</option>
+            <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+            <option value="Botswana">Botswana</option>
+            <option value="Bouvet Island">Bouvet Island</option>
+            <option value="Brazil">Brazil</option>
+            <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+            <option value="Brunei Darussalam">Brunei Darussalam</option>
+            <option value="Bulgaria">Bulgaria</option>
+            <option value="Burkina Faso">Burkina Faso</option>
+            <option value="Burundi">Burundi</option>
+            <option value="Cambodia">Cambodia</option>
+            <option value="Cameroon">Cameroon</option>
+            <option value="Canada">Canada</option>
+            <option value="Cape Verde">Cape Verde</option>
+            <option value="Cayman Islands">Cayman Islands</option>
+            <option value="Central African Republic">Central African Republic</option>
+            <option value="Chad">Chad</option>
+            <option value="Chile">Chile</option>
+            <option value="China">China</option>
+            <option value="Christmas Island">Christmas Island</option>
+            <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+            <option value="Colombia">Colombia</option>
+            <option value="Comoros">Comoros</option>
+            <option value="Congo">Congo</option>
+            <option value="Cook Islands">Cook Islands</option>
+            <option value="Costa Rica">Costa Rica</option>
+            <option value="Cote D'ivoire">Cote D'ivoire</option>
+            <option value="Croatia">Croatia</option>
+            <option value="Cuba">Cuba</option>
+            <option value="Cyprus">Cyprus</option>
+            <option value="Czech Republic">Czech Republic</option>
+            <option value="Denmark">Denmark</option>
+            <option value="Djibouti">Djibouti</option>
+            <option value="Dominica">Dominica</option>
+            <option value="Dominican Republic">Dominican Republic</option>
+            <option value="Ecuador">Ecuador</option>
+            <option value="Egypt">Egypt</option>
+            <option value="El Salvador">El Salvador</option>
+            <option value="Equatorial Guinea">Equatorial Guinea</option>
+            <option value="Eritrea">Eritrea</option>
+            <option value="Estonia">Estonia</option>
+            <option value="Ethiopia">Ethiopia</option>
+            <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+            <option value="Faroe Islands">Faroe Islands</option>
+            <option value="Fiji">Fiji</option>
+            <option value="Finland">Finland</option>
+            <option value="France">France</option>
+            <option value="French Guiana">French Guiana</option>
+            <option value="French Polynesia">French Polynesia</option>
+            <option value="French Southern Territories">French Southern Territories</option>
+            <option value="Gabon">Gabon</option>
+            <option value="Gambia">Gambia</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Germany">Germany</option>
+            <option value="Ghana">Ghana</option>
+            <option value="Gibraltar">Gibraltar</option>
+            <option value="Greece">Greece</option>
+            <option value="Greenland">Greenland</option>
+            <option value="Grenada">Grenada</option>
+            <option value="Guadeloupe">Guadeloupe</option>
+            <option value="Guam">Guam</option>
+            <option value="Guatemala">Guatemala</option>
+            <option value="Guernsey">Guernsey</option>
+            <option value="Guinea">Guinea</option>
+            <option value="Guinea-bissau">Guinea-bissau</option>
+            <option value="Guyana">Guyana</option>
+            <option value="Haiti">Haiti</option>
+            <option value="Heard Island and Mcdonald Islands">Heard Island and Mcdonald Islands
+            </option>
+            <option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
+            <option value="Honduras">Honduras</option>
+            <option value="Hong Kong">Hong Kong</option>
+            <option value="Hungary">Hungary</option>
+            <option value="Iceland">Iceland</option>
+            <option value="India">India</option>
+            <option value="Indonesia">Indonesia</option>
+            <option value="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
+            <option value="Iraq">Iraq</option>
+            <option value="Ireland">Ireland</option>
+            <option value="Isle of Man">Isle of Man</option>
+            <option value="Israel">Israel</option>
+            <option value="Italy">Italy</option>
+            <option value="Jamaica">Jamaica</option>
+            <option value="Japan">Japan</option>
+            <option value="Jersey">Jersey</option>
+            <option value="Jordan">Jordan</option>
+            <option value="Kazakhstan">Kazakhstan</option>
+            <option value="Kenya">Kenya</option>
+            <option value="Kiribati">Kiribati</option>
+            <option value="Korea, Democratic People's Republic of">Korea, Democratic People's
+                Republic of
+            </option>
+            <option value="Korea, Republic of">Korea, Republic of</option>
+            <option value="Kuwait">Kuwait</option>
+            <option value="Kyrgyzstan">Kyrgyzstan</option>
+            <option value="Lao People's Democratic Republic">Lao People's Democratic Republic
+            </option>
+            <option value="Latvia">Latvia</option>
+            <option value="Lebanon">Lebanon</option>
+            <option value="Lesotho">Lesotho</option>
+            <option value="Liberia">Liberia</option>
+            <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
+            <option value="Liechtenstein">Liechtenstein</option>
+            <option value="Lithuania">Lithuania</option>
+            <option value="Luxembourg">Luxembourg</option>
+            <option value="Macao">Macao</option>
+            <option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former
+                Yugoslav Republic of
+            </option>
+            <option value="Madagascar">Madagascar</option>
+            <option value="Malawi">Malawi</option>
+            <option value="Malaysia">Malaysia</option>
+            <option value="Maldives">Maldives</option>
+            <option value="Mali">Mali</option>
+            <option value="Malta">Malta</option>
+            <option value="Marshall Islands">Marshall Islands</option>
+            <option value="Martinique">Martinique</option>
+            <option value="Mauritania">Mauritania</option>
+            <option value="Mauritius">Mauritius</option>
+            <option value="Mayotte">Mayotte</option>
+            <option value="Mexico">Mexico</option>
+            <option value="Micronesia, Federated States of">Micronesia, Federated States of</option>
+            <option value="Moldova, Republic of">Moldova, Republic of</option>
+            <option value="Monaco">Monaco</option>
+            <option value="Mongolia">Mongolia</option>
+            <option value="Montenegro">Montenegro</option>
+            <option value="Montserrat">Montserrat</option>
+            <option value="Morocco">Morocco</option>
+            <option value="Mozambique">Mozambique</option>
+            <option value="Myanmar">Myanmar</option>
+            <option value="Namibia">Namibia</option>
+            <option value="Nauru">Nauru</option>
+            <option value="Nepal">Nepal</option>
+            <option value="Netherlands">Netherlands</option>
+            <option value="Netherlands Antilles">Netherlands Antilles</option>
+            <option value="New Caledonia">New Caledonia</option>
+            <option value="New Zealand">New Zealand</option>
+            <option value="Nicaragua">Nicaragua</option>
+            <option value="Niger">Niger</option>
+            <option value="Nigeria">Nigeria</option>
+            <option value="Niue">Niue</option>
+            <option value="Norfolk Island">Norfolk Island</option>
+            <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+            <option value="Norway">Norway</option>
+            <option value="Oman">Oman</option>
+            <option value="Pakistan">Pakistan</option>
+            <option value="Palau">Palau</option>
+            <option value="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option>
+            <option value="Panama">Panama</option>
+            <option value="Papua New Guinea">Papua New Guinea</option>
+            <option value="Paraguay">Paraguay</option>
+            <option value="Peru">Peru</option>
+            <option value="Philippines">Philippines</option>
+            <option value="Pitcairn">Pitcairn</option>
+            <option value="Poland">Poland</option>
+            <option value="Portugal">Portugal</option>
+            <option value="Puerto Rico">Puerto Rico</option>
+            <option value="Qatar">Qatar</option>
+            <option value="Reunion">Reunion</option>
+            <option value="Romania">Romania</option>
+            <option value="Russian Federation">Russian Federation</option>
+            <option value="Rwanda">Rwanda</option>
+            <option value="Saint Helena">Saint Helena</option>
+            <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+            <option value="Saint Lucia">Saint Lucia</option>
+            <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+            <option value="Saint Vincent and The Grenadines">Saint Vincent and The Grenadines
+            </option>
+            <option value="Samoa">Samoa</option>
+            <option value="San Marino">San Marino</option>
+            <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+            <option value="Saudi Arabia">Saudi Arabia</option>
+            <option value="Senegal">Senegal</option>
+            <option value="Serbia">Serbia</option>
+            <option value="Seychelles">Seychelles</option>
+            <option value="Sierra Leone">Sierra Leone</option>
+            <option value="Singapore">Singapore</option>
+            <option value="Slovakia">Slovakia</option>
+            <option value="Slovenia">Slovenia</option>
+            <option value="Solomon Islands">Solomon Islands</option>
+            <option value="Somalia">Somalia</option>
+            <option value="South Africa">South Africa</option>
+            <option value="South Georgia and The South Sandwich Islands">South Georgia and The South
+                Sandwich Islands
+            </option>
+            <option value="Spain">Spain</option>
+            <option value="Sri Lanka">Sri Lanka</option>
+            <option value="Sudan">Sudan</option>
+            <option value="Suriname">Suriname</option>
+            <option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+            <option value="Swaziland">Swaziland</option>
+            <option value="Sweden">Sweden</option>
+            <option value="Switzerland">Switzerland</option>
+            <option value="Syrian Arab Republic">Syrian Arab Republic</option>
+            <option value="Taiwan">Taiwan</option>
+            <option value="Tajikistan">Tajikistan</option>
+            <option value="Tanzania, United Republic of">Tanzania, United Republic of</option>
+            <option value="Thailand">Thailand</option>
+            <option value="Timor-leste">Timor-leste</option>
+            <option value="Togo">Togo</option>
+            <option value="Tokelau">Tokelau</option>
+            <option value="Tonga">Tonga</option>
+            <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+            <option value="Tunisia">Tunisia</option>
+            <option value="Turkey">Turkey</option>
+            <option value="Turkmenistan">Turkmenistan</option>
+            <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+            <option value="Tuvalu">Tuvalu</option>
+            <option value="Uganda">Uganda</option>
+            <option value="Ukraine">Ukraine</option>
+            <option value="United Arab Emirates">United Arab Emirates</option>
+            <option value="United Kingdom">United Kingdom</option>
+            <option value="United States">United States</option>
+            <option value="United States Minor Outlying Islands">United States Minor Outlying
+                Islands
+            </option>
+            <option value="Uruguay">Uruguay</option>
+            <option value="Uzbekistan">Uzbekistan</option>
+            <option value="Vanuatu">Vanuatu</option>
+            <option value="Venezuela">Venezuela</option>
+            <option value="Viet Nam">Viet Nam</option>
+            <option value="Virgin Islands, British">Virgin Islands, British</option>
+            <option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
+            <option value="Wallis and Futuna">Wallis and Futuna</option>
+            <option value="Western Sahara">Western Sahara</option>
+            <option value="Yemen">Yemen</option>
+            <option value="Zambia">Zambia</option>
+            <option value="Zimbabwe">Zimbabwe</option>
+        </select>
+
+
+        <input type="text" name="city"  id="cities"  required><br>
+
+        <label id="phone-label" for="phonenumber">Phone</label><br>
+        <label id="email-label" for="email">Email</label><br>
+        <input type="tel" name="phoneNumber" id="phonenumber"  required>
+
+        <input type="email" name="email" id="email" required><br>
+        <label for="birthday">Date of birth</label><br>
+        <input type="date" id="birthday"><br><br>
+        <div class="div-radio">
+            <br><label id="sex-label">Sex</label>
+            <div class="buttons">
+                Male<input class="radio" type="radio" name="sex" value="male" >
+                Female<input class="radio" type="radio" name="sex" value="female" ><br>
+            </div>
+        </div>
+        <div class="div-color">
+            <br><label for="bgcolor" id="color-label">Background color</label>
+            <div>
+                <input class="color" id="bgcolor" type="color" name="color"  >
+            </div>
+        </div>
+       <br><br> <label id="comment-label" for="comment">Notes(optional)</label><br>
+        <textarea id="comment" rows="5" placeholder="Some information..."></textarea>
+
+        <input class="add-btn" type="submit" value="Add">
+    </form>
+</div>
+
+<div class="teacher-information" data-color="#343434">
+    <div class="title">
+        <p id="closer2" onclick="HideinfoForm()">&#10006;  </p>
+        <p id="card-title">  Teacher Info</p>
+    </div>
+    <div class="pic-disc">
+        <div class="pic">
+            <img class="img-card" src="img/teacher2.png" alt="teacher-pic">
+        </div>
+        <div class="disc">
+            <h2 class="name">Ihor Tkachuk</h2>
+            <p id="job">Chemistry</p>
+            <p id="live">Kiev, Ukraine</p>
+            <p>35, Male</p>
+            <p><a href="mailto:ihor_tkachuk@domain.com">ihor_tkachuk@domain.com</a></p>
+            <p id="number">+380964993252</p>
+        </div>
+    </div>
+    <p class="comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqunderit in sed do eiusmod tempor incididunt. </p>
+    <a class="map">toggle map</a>
+</div>
+<script>
+    function scrlRight(){
+        document.getElementsByClassName("favorite-teacher-list")[0].scrollLeft += 200;
+    }
+    function scrlLeft(){
+        document.getElementsByClassName("favorite-teacher-list")[0].scrollLeft -= 200;
+    }
+
+
+    function addForm(){
+        document.getElementsByClassName("add-popup")[0].className = 'add-popup-active';
+        document.getElementsByClassName("main-wrapper")[0].className = 'main-wrapper-active';
+    }
+    function infoForm(){
+        document.getElementsByClassName("teacher-information")[0].className = 'teacher-active';
+        document.getElementsByClassName("main-wrapper")[0].className = 'main-wrapper-active';
+    }
+    function HideinfoForm(){
+        document.getElementsByClassName("teacher-active")[0].className = 'teacher-information';
+        document.getElementsByClassName("main-wrapper-active")[0].className = 'main-wrapper';
+    }
+    function hideAddForm(){
+        document.getElementsByClassName("add-popup-active")[0].className = 'add-popup';
+        document.getElementsByClassName("main-wrapper-active")[0].className = 'main-wrapper';
+    }
+
+</script>
+</body>
+</html>

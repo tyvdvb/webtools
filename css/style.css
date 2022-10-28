@@ -1,0 +1,1727 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins&family=Rubik+Moonrocks&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@700&family=Kanit:ital,wght@1,600&family=Lobster&family=Poppins&family=Rubik+Moonrocks&display=swap');
+.main-wrapper, .main-wrapper-active {
+    width: 68vw;
+    margin: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+a:link {
+    text-decoration: none;
+}
+
+
+a:visited {
+    text-decoration: none;
+}
+
+
+a:hover {
+    text-decoration: none;
+}
+
+
+a:active {
+    text-decoration: none;
+}
+
+
+.search-btn, .add-btn {
+    border: 1px solid #ff6600;
+    color: #ff6600;
+    font-weight: bold;
+    -webkit-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+    font-family: "Poppins", sans-serif;
+}
+
+.search-btn:hover, .add-btn:hover {
+    background-color: #ff6600;
+    color: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.main-wrapper-active {
+    filter: blur(2px);
+}
+
+.content-wrapper {
+    width: 84%;
+    margin: auto;
+}
+
+header {
+    width: 100%;
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header h1 {
+    color: #f1f1f1;
+    letter-spacing: 2px;
+    font-size: 40px;
+    font-family: 'Frank Ruhl Libre', serif;
+    text-shadow: -2px -2px 0px #ff6600, 2px 2px 0px #000;
+}
+
+header h1:hover {
+    text-shadow: -3px -2px 0px #ff6600, 3px 2px 0px #000;
+}
+
+header form {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header input {
+    height: 100%;
+    background: transparent;
+    box-sizing: border-box;
+    font-size: 13px;
+    outline: none;
+    -webkit-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+    font-family: "Poppins", sans-serif;
+}
+
+.searcher {
+    width: 200px;
+    margin-top: 8%;
+    padding-left: 5px;
+    margin-right: 12px;
+    border: 1px solid #676767;
+    -webkit-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+    font-family: "Poppins", sans-serif;
+}
+.searcher:hover{
+    width: 240px;
+}
+
+.search-btn {
+    margin-top: 8%;
+    cursor: pointer;
+    width: 80px;
+}
+
+.func {
+    width: 100%;
+    height: 50px;
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.nav-links a {
+    font-size: 24px;
+    color: #ff6600;
+    font-weight: 600;
+    -webkit-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+}
+
+.nav-links a:hover {
+    -webkit-filter: brightness(60%);
+    filter: brightness(60%);
+}
+
+.navigation {
+    width: 400px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation a {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.add-teacher {
+    outline: none;
+    background-color: #fff;
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #ff6600;
+    font-weight: bold;
+    font-size: 20px;
+    border: 1px solid #ff6600;
+    -webkit-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+    font-family: "Poppins", sans-serif;
+}
+
+.add-teacher:hover {
+    background-color: #ff6600;
+    color: #fff;
+}
+
+hr {
+    width: 60%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.65);
+    border: none;
+    margin: auto;
+    margin-top: 26px;
+}
+
+.headers {
+    margin-top: 32px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+}
+
+.top-teachers {
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.top-teachers form {
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+.top-teachers form select {
+    font-size: 12px;
+}
+
+.top-teachers label {
+    color: #676767;
+}
+
+.top-teachers label:hover {
+    color: #000;
+}
+
+.top-teachers input {
+    margin-left: 15px;
+}
+.top-teachers input {
+    margin-left: 15px;
+}
+
+.line-vertical {
+    display: inline;
+    border-right: 2px dotted grey;
+    margin: 0 20px;
+}
+
+/*.left-label-check {*/
+/*    border-right: 2px dotted #676767;*/
+/*    padding-right: 40px;*/
+/*}*/
+
+.teacher-list {
+    display: grid;
+    margin-top: 20px;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 30px;
+}
+
+.teacher-list li {
+    list-style: none;
+}
+
+.person {
+    text-align: center;
+    font-size: 20px;
+}
+
+.person figcaption {
+    font-weight: bold;
+    margin: auto;
+}
+
+.subject {
+    width: 100%;
+    font-size: 11px;
+    color:gray;
+    text-align: center;
+    margin-top: 3%;
+}
+.country {
+    width: 100%;
+    font-size: 9px;
+    text-align: center;
+    margin-top: 3%;
+}
+
+.teacher-list .favorite:before {
+    color: #e7e76f;
+    font-size: 30px;
+    margin-left: 130px;
+    position: absolute;
+    content: '\2605';
+}
+
+.img-wrapper {
+    cursor: pointer;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid #ff6600;
+    margin: auto;
+    margin-bottom: 20px;
+    line-height: 100px;
+    color: #ff6600;
+    font-size: 30px;
+}
+
+.img-wrapper img {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    color: #ff6600;
+    font-size: 20px;
+    text-align: center;
+}
+
+.img-wrapper img:hover {
+    transform: scale(1.1, 1.1);
+}
+
+.img-wrapper:hover {
+    border: 4px solid #ab1919;
+    font-size: 33px;
+    color: #ab1919;
+}
+
+.statistics-table {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.statistics-table tr {
+    width: 100%;
+    text-align: center;
+}
+
+.statistics-table td {
+    height: 30px;
+}
+
+.statistics-table th {
+    height: 50px;
+}
+
+.statistics-table h4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 5px solid transparent;
+    height: 100%;
+    line-height: 100%;
+}
+
+.statistics-table h4:hover {
+    border-bottom: 5px solid #000;
+    background-color: #ebebeb;
+
+}
+
+
+
+.columns {
+    border-bottom: 1px solid #000;
+}
+
+.columns .name-coll {
+    padding-left: 0px;
+}
+
+.columns .name-coll h4 {
+    justify-content: left;
+    padding-left: 20px;
+}
+
+.name-coll {
+    text-align: left;
+    width: 20%;
+    padding-left: 20px;
+}
+
+.even {
+    background-color: rgba(251, 243, 243, 0.85);
+}
+
+.odd {
+    background-color: #fff;
+}
+
+
+.pagination {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 20px;
+}
+
+.pagination a {
+    color: #275dff;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.pagination .current-page {
+    color: #000;
+}
+
+.favorites-wrapper {
+    margin-top: 40px;
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.arrow {
+    height: 50px;
+    display: block;
+    margin: auto;
+}
+
+.arrow:hover {
+    transform: scale(1.1, 1.1);
+}
+
+.favorite-teacher-list {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: start;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    column-gap: 40px;
+}
+
+.favorite-teacher-list li {
+    list-style: none;
+}
+
+.about {
+    margin-top: 40px;
+}
+
+footer {
+    color: #7d66ff;
+}
+
+footer a:hover {
+    color: #001665;
+}
+
+
+/******************POPUPS*********************/
+
+.add-popup {
+    display: none;
+}
+
+.teacher-information {
+    display: none;
+}
+
+.teacher-active {
+    display: block;
+    position: absolute;
+    top: calc(50vh - 300px);
+    left: calc(50vw - 415px);
+    border: 1px solid #000;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.71);
+    width: 830px;
+    height: 530px;
+}
+
+.teacher-active p:not(.comment){
+    white-space: pre;
+}
+
+#closer2 {
+    display: block;
+    cursor: pointer;
+    float: right;
+    text-align: right;
+    font-size: 20px;
+    background-color: #525050;
+    width: 50%;
+    color: white;
+}
+
+#card-title {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    float: left;
+    font-size: 20px;
+    background-color: #525050;
+    width: 50%;
+    font-weight: bold;
+    color: white;
+}
+
+
+
+.teacher-active .pic-disc {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    justify-content: space-between;
+}
+#job{
+    font-weight: bolder;
+    font-size: 17px;
+}
+#live{
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.teacher-active .pic-disc .pic {
+    margin-top: 15px;
+    width: 40%;
+}
+
+.teacher-active .pic-disc .pic img {
+    width: 100%;
+    height: 100%;
+}
+
+.teacher-active .pic-disc .disc {
+    padding-left: 5%;
+    padding-top: 1%;
+    width: 60%;
+}
+
+.teacher-active .pic-disc .disc h2 {
+    font-size: 39px;
+    font-weight: normal;
+    margin-bottom: 40px;
+}
+
+.teacher-active .pic-disc .disc h2:after {
+    color: yellow;
+    font-size: 40px;
+    margin-left: 50px;
+    margin-top: -10px;
+    position: absolute;
+    content: '\2605';
+}
+
+.teacher-active .pic-disc .disc p, .teacher-active .pic-disc .disc a {
+    display: block;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+.teacher-active .comment {
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.teacher-active .map {
+    color: #0037ff;
+    border-bottom: 1px dashed #0037ff;
+    margin-left: 10%;
+    margin-top: 18px;
+}
+
+.add-popup-active {
+    display: block;
+    position: absolute;
+    top: calc(50vh - 280px);
+    left: calc(50vw - 170px);
+    border: 1px solid #000;
+    background-color: #fff;
+    width: 350px;
+    height: 680px;
+    font-size: 13px;
+    color: #4b4949;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.71);
+}
+.add-popup-active p{
+
+    white-space: pre;
+}
+
+
+#closer {
+    display: block;
+    cursor: pointer;
+    float: right;
+    text-align: right;
+    font-size: 20px;
+    background-color: #525050;
+    width: 50%;
+    color: white;
+}
+
+#form-title {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    float: left;
+    font-size: 20px;
+    background-color: #525050;
+    width: 50%;
+    font-weight: bold;
+    color: white;
+}
+
+
+.add-popup-active form {
+    width: 80%;
+    height: 600px;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.add-popup-active form #countries, #countries-label{
+    display: block;
+    float: left;
+    width: 49%;
+}
+.add-popup-active form #cities, #cities-label{
+    position: relative;
+    display: block;
+    float: right;
+    width: 49%;
+}
+.add-popup-active form #phonenumber, #phone-label{
+    display: block;
+    float: left;
+    width: 49%;
+}
+.add-popup-active form #email, #email-label{
+    position: relative;
+    display: block;
+    float: right;
+    width: 49%;
+}
+
+.add-popup-active form input:not(.buttons input, .color, .add-btn), .add-popup-active form select {
+    box-sizing: border-box;
+    width: 100%;
+    height: 30px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+#birthday{
+    float: left;
+    width: 49%;
+}
+
+#sex-label{
+    display: block;
+    float: left;
+    width: 20%;
+}
+
+#bgcolor{
+
+    float: left;
+    width: 20%;
+    height: 15px;
+    margin: auto auto auto 30px;
+}
+#color-label{
+    float: left;
+
+}
+#color-label::after{
+    width: 1%;
+    position: absolute;
+    align-self: center;
+    margin: auto auto auto 16px;
+
+    content: url("/img/color.jpg");
+}
+
+#comment{
+    width: 100%;
+}
+.buttons input {
+    height: 10px;
+    margin-left: 10px;
+}
+
+.add-btn {
+    margin-top: 35px;
+    background-color: #fff;
+    height: 40px;
+    width: 100%;
+    font-size: 23px;
+}
+
+@media only screen and (max-width: 1300px) {
+
+
+    .teacher-list .favorite:before {
+        margin-left: 120px;
+    }
+
+    .teacher-active {
+        top: calc(50vh - 265px);
+        left: calc(50vw - 365px);
+        width: 730px;
+        height: 530px;
+    }
+
+
+
+    #closer2 {
+        display: block;
+        cursor: pointer;
+        float: right;
+        text-align: right;
+        font-size: 20px;
+        background-color: #525050;
+        width: 50%;
+        color: white;
+    }
+
+    #card-title {
+        position: relative;
+        display: block;
+        cursor: pointer;
+        float: left;
+        font-size: 20px;
+        background-color: #525050;
+        width: 50%;
+        font-weight: bold;
+        color: white;
+    }
+
+
+    .teacher-active .pic-disc {
+        margin-top: 25px;
+    }
+    #job{
+        font-weight: bolder;
+        font-size: 17px;
+    }
+    #live{
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+    .teacher-active .pic-disc .pic {
+        margin-top: 15px;
+        width: 40%;
+    }
+
+    .teacher-active .pic-disc .pic img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .teacher-active .pic-disc .disc {
+        padding-left: 5%;
+        padding-top: 1%;
+        width: 60%;
+    }
+
+    .teacher-active .pic-disc .disc h2 {
+        font-size: 35px;
+        margin-bottom: 35px;
+    }
+
+    .teacher-active .pic-disc .disc h2:after {
+        font-size: 30px;
+        margin-left: 50px;
+        margin-top: 0px;
+    }
+
+    .teacher-active .pic-disc .disc p, .teacher-active .pic-disc .disc a {
+        font-size: 14px;
+        margin-bottom: 18px;
+    }
+
+    .teacher-active .comment {
+        margin-top: 18px;
+        margin-bottom: 16px;
+        font-size: 14px;
+    }
+
+    .teacher-active .map {
+        font-size: 14px;
+        margin-left: 10%;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .teacher-list .favorite:before {
+        margin-left: 100px;
+    }
+
+    .add-popup-active {
+        top: calc(50vh - 230px);
+    }
+
+    .teacher-active {
+        top: calc(50vh - 220px);
+        left: calc(50vw - 300px);
+        width: 600px;
+        height: 440px;
+    }
+
+    #closer2 {
+        display: block;
+        cursor: pointer;
+        float: right;
+        text-align: right;
+        font-size: 20px;
+        background-color: #525050;
+        width: 50%;
+        color: white;
+    }
+
+    #card-title {
+        position: relative;
+        display: block;
+        cursor: pointer;
+        float: left;
+        font-size: 20px;
+        background-color: #525050;
+        width: 50%;
+        font-weight: bold;
+        color: white;
+    }
+
+
+    .teacher-active .pic-disc {
+        margin-top: 25px;
+    }
+
+    #job{
+        font-weight: bolder;
+        font-size: 17px;
+    }
+    #live{
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+    .teacher-active .pic-disc .pic {
+        margin-top: 15px;
+        width: 40%;
+    }
+
+    .teacher-active .pic-disc .pic img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .teacher-active .pic-disc .disc {
+        padding-left: 5%;
+        padding-top: 1%;
+        width: 60%;
+    }
+
+    .teacher-active .pic-disc .disc h2 {
+        font-size: 30px;
+        margin-bottom: 35px;
+    }
+
+    .teacher-active .pic-disc .disc h2:after {
+        font-size: 20px;
+        margin-left: 30px;
+        margin-top: 5px;
+    }
+
+    .teacher-active .pic-disc .disc p, .teacher-active .pic-disc .disc a {
+        font-size: 12px;
+        margin-bottom: 14px;
+    }
+
+    .teacher-active .comment {
+        margin-top: 18px;
+        margin-bottom: 16px;
+        font-size: 12px;
+    }
+
+    .teacher-active .map {
+        font-size: 12px;
+        margin-left: 10%;
+    }
+
+    .searcher {
+        width: 150px;
+        margin-top: 8%;
+        padding-left: 5px;
+        margin-right: 12px;
+        border: 1px solid #676767;
+        -webkit-transition: all 0.6s ease;
+        transition: all 0.6s ease;
+        font-family: "Poppins", sans-serif;
+        font-size: 10px ;
+        height: 33px;
+    }
+
+    .searcher:hover{
+        width: 160px;
+    }
+    .search-btn{
+        margin-top: 8%;
+        height: 35px;
+    }
+    .navigation a{
+        width: 320px;
+    }
+    .add-teacher{
+        font-size: 15px;
+    }
+    .statistics-table {
+        font-size: 14px;
+    }
+    .headers{
+        font-size: 20px;
+    }
+    .person{
+        font-size: 18px;
+    }
+    #about{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+
+    .searcher {
+        width: 130px;
+        margin-top: 4%;
+        padding-left: 5px;
+        margin-right: 12px;
+        border: 1px solid #676767;
+        -webkit-transition: all 0.6s ease;
+        transition: all 0.6s ease;
+        font-family: "Poppins", sans-serif;
+        font-size: 8px ;
+        height: 30px;
+    }
+
+    .searcher:hover{
+        width: 145px;
+    }
+    .search-btn{
+        margin-top: 4%;
+        height: 30px;
+    }
+
+    .teacher-list {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .navigation {
+        width: 280px;
+    }
+    .top-teachers form label,
+    .top-teachers form select{
+        font-size: 10px;
+    }
+
+    .navigation a {
+        font-size: 15px;
+    }
+
+    .add-teacher {
+        margin-top: 6px;
+        width: 120px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 15px;
+    }
+
+    header {
+        height: 40px;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+    .add-btn{
+        font-size: 25px;
+    }
+
+    .func {
+        margin-top: 40px;
+    }
+
+    hr {
+        margin-top: 15px;
+    }
+
+    .top-teachers {
+        margin-top: 30px;
+    }
+
+    .top-teachers form {
+        margin-bottom: 20px;
+    }
+
+    .teacher-list .favorite:before {
+        margin-left: 110px;
+    }
+
+    .add-popup-active {
+        top: calc(50vh - 200px);
+    }
+
+    .teacher-active {
+        top: calc(50vh - 190px);
+        left: calc(50vw - 260px);
+        width: 520px;
+        height: 380px;
+    }
+
+    #job{
+        font-weight: bolder;
+        font-size: 14px;
+    }
+    #live{
+        font-weight: bold;
+        font-size: 11px;
+    }
+
+    #closer2 {
+        display: block;
+        cursor: pointer;
+        float: right;
+        text-align: right;
+        font-size: 20px;
+        background-color: #525050;
+        width: 50%;
+        color: white;
+    }
+
+    #card-title {
+        position: relative;
+        display: block;
+        cursor: pointer;
+        float: left;
+        font-size: 20px;
+        background-color: #525050;
+        width: 50%;
+        font-weight: bold;
+        color: white;
+    }
+
+
+    .teacher-active .pic-disc {
+        margin-top: 20px;
+    }
+
+    .teacher-active .pic-disc .pic {
+        width: 42%;
+    }
+
+    .teacher-active .pic-disc .pic img {
+        width: 100%;
+    }
+
+    .teacher-active .pic-disc .disc {
+        padding-left: 5%;
+        padding-top: 1%;
+        width: 60%;
+    }
+
+    .teacher-active .pic-disc .disc h2 {
+        font-size: 26px;
+        margin-bottom: 30px;
+    }
+
+    .teacher-active .pic-disc .disc h2:after {
+        font-size: 20px;
+        margin-left: 30px;
+        margin-top: 0px;
+    }
+
+    .teacher-active .pic-disc .disc p, .teacher-active .pic-disc .disc a {
+        font-size: 11px;
+        margin-bottom: 12px;
+    }
+
+    .teacher-active .comment {
+        margin-top: 18px;
+        margin-bottom: 10px;
+        font-size: 10px;
+    }
+
+    .teacher-active .map {
+        font-size: 10px;
+        margin-left: 10%;
+    }
+    .person{
+        font-size: 14px;
+    }
+    .headers{
+        font-size: 15px;
+    }
+
+    #about{
+        font-size: 12px;
+    }
+    .statistics-table{
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .teacher-list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+
+    .navigation {
+        width: 250px;
+    }
+
+    .navigation a {
+        font-size: 14px;
+    }
+
+    .searcher {
+        height: 20px;
+        width: 100px;
+        padding-left: 5px;
+        margin-right: 12px;
+        font-size: 8px;
+    }
+
+    .search-btn {
+        font-size: 8px;
+        cursor: pointer;
+        width: 60px;
+        height: 20px;
+    }
+
+    .add-teacher {
+        margin-top: 7px;
+        width: 100px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 14px;
+    }
+
+    header {
+        height: 35px;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    .func {
+        margin-top: 30px;
+    }
+
+    hr {
+        margin-top: 10px;
+    }
+
+    .headers {
+        margin-top: 28px;
+        font-size: 30px;
+    }
+
+    .top-teachers {
+        margin-top: 20px;
+    }
+
+    .main-wrapper {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .teacher-list .favorite:before {
+        margin-left: 120px;
+    }
+
+    .add-popup-active {
+        top: calc(50vh - 170px);
+    }
+
+    .teacher-active {
+        top: calc(50vh - 165px);
+        left: calc(50vw - 230px);
+        width: 460px;
+        height: 330px;
+    }
+
+    #job{
+        font-weight: bolder;
+        font-size: 12px;
+    }
+    #live{
+        font-weight: bold;
+        font-size: 8px;
+    }
+    #closer2 {
+        display: block;
+        cursor: pointer;
+        float: right;
+        text-align: right;
+        font-size: 20px;
+        background-color: #525050;
+        width: 50%;
+        color: white;
+    }
+
+    #card-title {
+        position: relative;
+        display: block;
+        cursor: pointer;
+        float: left;
+        font-size: 20px;
+        background-color: #525050;
+        width: 50%;
+        font-weight: bold;
+        color: white;
+    }
+
+
+    .teacher-active .pic-disc {
+        margin-top: 20px;
+    }
+
+    .teacher-active .pic-disc .pic {
+        width: 42%;
+    }
+
+    .teacher-active .pic-disc .pic img {
+        width: 100%;
+    }
+
+    .teacher-active .pic-disc .disc {
+        padding-left: 5%;
+        padding-top: 1%;
+        width: 60%;
+    }
+
+    .teacher-active .pic-disc .disc h2 {
+        font-size: 22px;
+        margin-bottom: 25px;
+    }
+
+    .teacher-active .pic-disc .disc h2:after {
+        font-size: 20px;
+        margin-left: 30px;
+        margin-top: 0px;
+    }
+
+    .teacher-active .pic-disc .disc p, .teacher-active .pic-disc .disc a {
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+
+    .teacher-active .comment {
+        margin-top: 18px;
+        margin-bottom: 10px;
+        font-size: 8px;
+    }
+
+    .teacher-active .map {
+        font-size: 8px;
+        margin-left: 10%;
+    }
+    .person{
+        font-size: 14px;
+    }
+    .headers{
+        font-size: 15px;
+    }
+
+    .searcher {
+        width: 123px;
+        margin-top: 6%;
+        padding-left: 5px;
+        margin-right: 12px;
+        border: 1px solid #676767;
+        -webkit-transition: all 0.6s ease;
+        transition: all 0.6s ease;
+        font-family: "Poppins", sans-serif;
+    }
+    .searcher:hover{
+        width: 135px;
+    }
+    #about{
+        font-size: 12px;
+    }
+    .statistics-table{
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .teacher-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .navigation {
+        width: 200px;
+    }
+
+    .navigation a {
+        font-size: 10px;
+    }
+
+    .searcher {
+        height: 15px;
+        width: 80px;
+        padding-left: 5px;
+        margin-right: 12px;
+        font-size: 5px;
+    }
+
+    .search-btn {
+        font-size: 5px;
+        cursor: pointer;
+        width: 40px;
+        height: 15px;
+    }
+
+    .add-teacher {
+        margin-top: 14px;
+        width: 80px;
+        height: 20px;
+        line-height: 20px;
+        font-size: 10px;
+    }
+
+    header {
+        height: 22px;
+    }
+
+    header h1 {
+        font-size: 20px;
+        text-shadow: -1px -0.5px 0px #ff6600, 1px 0.5px 0px #000;
+    }
+
+    header h1:hover {
+        text-shadow: -1.5px -0.5px 0px #ff6600, 1.5px 0.5px 0px #000;
+    }
+
+    .top-teachers {
+        margin-top: 15px;
+    }
+
+    .top-teachers form {
+        font-size: 10px;
+    }
+
+    .top-teachers form input {
+        width: 8px;
+        height: 8px;
+    }
+
+    .statistics-table, .pagination {
+        font-size: 10px;
+    }
+
+    .func {
+        margin-top: 10px;
+    }
+
+    hr {
+        margin-top: 5px;
+    }
+
+    .headers {
+        margin-top: 20px;
+        font-size: 25px;
+    }
+
+    .main-wrapper {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .teacher-list .favorite:before {
+        margin-left: 130px;
+    }
+
+    .add-popup-active {
+        top: calc(50vh - 120px);
+    }
+
+    .teacher-active {
+        top: calc(50vh - 130px);
+        left: calc(50vw - 185px);
+        width: 370px;
+        height: 280px;
+    }
+
+    #closer2 {
+        display: block;
+        cursor: pointer;
+        float: right;
+        text-align: right;
+        font-size: 20px;
+        background-color: #525050;
+        width: 50%;
+        color: white;
+    }
+
+    #card-title {
+        position: relative;
+        display: block;
+        cursor: pointer;
+        float: left;
+        font-size: 20px;
+        background-color: #525050;
+        width: 50%;
+        font-weight: bold;
+        color: white;
+    }
+
+
+    .teacher-active .pic-disc {
+        margin-top: 15px;
+    }
+
+    .teacher-active .pic-disc .pic {
+        width: 42%;
+    }
+
+    .teacher-active .pic-disc .pic img {
+        width: 100%;
+    }
+
+    .teacher-active .pic-disc .disc {
+        padding-left: 5%;
+        padding-top: 1%;
+        width: 60%;
+    }
+
+    .teacher-active .pic-disc .disc h2 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .teacher-active .pic-disc .disc h2:after {
+        font-size: 15px;
+        margin-left: 20px;
+        margin-top: 0px;
+    }
+
+    .teacher-active .pic-disc .disc p, .teacher-active .pic-disc .disc a {
+        font-size: 8px;
+        margin-bottom: 8px;
+    }
+
+    .teacher-active .comment {
+        margin-top: 12px;
+        margin-bottom: 6px;
+        font-size: 7px;
+    }
+
+    .teacher-active .map {
+        font-size: 7px;
+        margin-left: 10%;
+    }
+    .top-teachers form select {
+        font-size: 9px;
+    }
+    .person{
+        font-size: 14px;
+    }
+    .headers{
+        font-size: 15px;
+    }
+
+    .searcher {
+        width: 95px;
+        margin-top: 4%;
+        padding-left: 5px;
+        margin-right: 12px;
+        border: 1px solid #676767;
+        -webkit-transition: all 0.6s ease;
+        transition: all 0.6s ease;
+        font-family: "Poppins", sans-serif;
+    }
+    .searcher:hover{
+        width: 110px;
+    }
+    #about{
+        font-size: 10px;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    .teacher-list {
+        grid-template-columns: 1fr;
+    }
+
+    .navigation {
+        width: 190px;
+
+    }
+
+    .navigation a {
+        font-size: 8px;
+    }
+
+    .searcher {
+        height: 12px;
+        width: 60px;
+        padding-left: 5px;
+        margin-right: 5px;
+        font-size: 5px;
+
+    }
+
+    .search-btn {
+        font-size: 5px;
+        cursor: pointer;
+        width: 30px;
+        height: 12px;
+        margin-top: 8px;
+    }
+
+    .add-teacher {
+        margin-top: 17px;
+        width: 50px;
+        height: 15px;
+        line-height: 15px;
+        font-size: 7px;
+    }
+
+    header {
+        margin-top: 4px;
+        height: 16px;
+    }
+
+    header h1 {
+        font-size: 14px;
+        text-shadow: -1px -0.5px 0px #ff6600, 1px 0.5px 0px #000;
+    }
+
+    header h1:hover {
+        text-shadow: -1.5px -0.5px 0px #ff6600, 1.5px 0.5px 0px #000;
+    }
+
+    .top-teachers {
+        margin-top: 10px;
+    }
+
+    .top-teachers form {
+        font-size: 6px;
+    }
+
+    .top-teachers form input {
+        width: 5px;
+        height: 5px;
+    }
+
+
+    .statistics-table, .pagination {
+        font-size: 8px;
+    }
+
+    .func {
+        margin-top: 5px;
+    }
+
+    hr {
+        margin-top: 0px;
+    }
+
+    .headers {
+        margin-top: 10px;
+        font-size: 12px;
+    }
+
+    .main-wrapper {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .teacher-list .favorite:before {
+        margin-left: 160px;
+    }
+
+    .add-popup-active {
+        top: calc(50vh - 90px);
+    }
+    .person{
+        font-size: 12px;
+    }
+#about{
+    font-size: 8px;
+}
+    .teacher-active {
+        top: calc(50vh - 80px);
+        left: calc(50vw - 115px);
+        width: 230px;
+        height: 160px;
+    }
+
+
+    #closer2 {
+        display: block;
+        cursor: pointer;
+        float: right;
+        text-align: right;
+        font-size: 10px;
+        background-color: #525050;
+        width: 50%;
+        color: white;
+    }
+
+    #card-title {
+        position: relative;
+        display: block;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        background-color: #525050;
+        width: 50%;
+        font-weight: bold;
+        color: white;
+    }
+
+
+    .teacher-active .pic-disc {
+        margin-top: 10px;
+    }
+    #job{
+        font-weight: bolder;
+        font-size: 7px;
+    }
+    #live{
+        font-weight: bold;
+        font-size: 5px;
+    }
+    .teacher-active .comment {
+        width: 80%;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+
+    .teacher-active .pic-disc .pic {
+        margin-top: 15px;
+        width: 42%;
+    }
+
+    .teacher-active .pic-disc .pic img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .teacher-active .pic-disc .disc {
+        padding-left: 5%;
+        padding-top: 1%;
+        width: 60%;
+    }
+
+    .teacher-active .pic-disc .disc h2 {
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+
+    .teacher-active .pic-disc .disc h2:after {
+        font-size: 10px;
+        margin-left: 10px;
+        margin-top: 0px;
+    }
+
+    .teacher-active .pic-disc .disc p, .teacher-active .pic-disc .disc a {
+        font-size: 5px;
+        margin-bottom: 5px;
+    }
+
+    .teacher-active .comment {
+        margin-top: 4px;
+        margin-bottom: -5px;
+        font-size: 4px;
+    }
+
+    .teacher-active .map {
+        font-size: 4px;
+        margin-left: 10%;
+    }
+
+    .top-teachers form select {
+        font-size: 6px;
+    }
+    .searcher {
+        width: 80px;
+        margin-top: 7%;
+        padding-left: 5px;
+        margin-right: 12px;
+        border: 1px solid #676767;
+        -webkit-transition: all 0.6s ease;
+        transition: all 0.6s ease;
+        font-family: "Poppins", sans-serif;
+    }
+    .searcher:hover{
+        width: 100px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .top-teachers {
+        margin-top: 7px;
+    }
+
+    .top-teachers form select {
+        font-size: 4px;
+    }
+
+    .top-teachers form {
+        font-size: 4px;
+    }
+
+    .top-teachers form input {
+        width: 4px;
+        height: 4px;
+    }
+
+
+    .headers {
+        margin-top: 7px;
+    }
+
+    .teacher-list .favorite:before {
+        margin-left: 150px;
+    }
+
+    .add-popup-active {
+        top: calc(50vh - 120px);
+    }
+
+    .add-popup-active {
+        top: calc(50vh - 120px);
+        left: calc(50vw - 145px);
+        width: 360px;
+
+    }
+}
