@@ -98,3 +98,24 @@ function removeTeacherFromFavorite(teacher) {
 //
 // }
 
+function sortByAge(){
+    let teachers = document.getElementsByClassName("person-info");
+    for (let teacher of teachers) {
+        if(teacher.age("img").length===0){
+            if(document.getElementsByClassName("with-photo")[0].checked === false){
+                if(teacher.className!=="person-info favorite"){
+                    if(document.getElementsByClassName("favorites")[0].checked === false){
+                        teacher.hidden = false;
+                    }
+                }
+                else{
+                    teacher.hidden = false;
+                }
+            }
+            else{
+                teacher.hidden = true;
+            }
+        }
+    }
+}
+
