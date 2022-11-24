@@ -36,9 +36,9 @@
             <form>
                 <label for="ages">Age:</label>
                 <select id="ages">
-                    <option value="young">18-31</option>
-                    <option value="middleaged">32-50</option>
-                    <option value="elder">51-65</option>
+                    <option value="young" onclick="" >18-31</option>
+                    <option value="middleaged" onclick="" >32-50</option>
+                    <option value="elder" onclick="" >51-65</option>
                 </select>
 
                 <div class="line-vertical"></div>
@@ -773,29 +773,9 @@
             }
         }
     }
-    function sortByAge(){
-        let teachers = document.getElementsByClassName("person-info");
-        for (let teacher of teachers) {
-            if(teacher.getElementsByClassName("img").length===0){
-                if(document.getElementsByClassName("with-photo")[0].checked === false){
-                    if(teacher.className!=="person-info favorite"){
-                        if(document.getElementsByClassName("favorites")[0].checked === false){
-                            teacher.hidden = false;
-                        }
-                    }
-                    else{
-                        teacher.hidden = false;
-                    }
-                }
-                else{
-                    teacher.hidden = true;
-                }
-            }
-        }
-    }
 
 
 </script>
-<script src="test.js" type="module"></script>
+<script src="js/test.js" type="module"></script>
 </body>
 </html>
