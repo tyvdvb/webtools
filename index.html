@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+
 <div class="main-wrapper">
     <div class="content-wrapper">
         <header>
@@ -61,15 +62,16 @@
                 </select>
                 <div class="line-vertical"></div>
 
-                <input class="with-photo" type="checkbox" id="photo" name="photo"  >
+                <input class="with-photo" type="checkbox" id="photo" name="photo" onclick="onlyWithPhoto()" >
                 <label class="left-label-check" for="photo">Only with photo</label>
 
                 <div class="line-vertical"></div>
-                <input class="favorites" type="checkbox" id="favorites" name="favorites"  >
+                <input class="favorites" type="checkbox" id="favorites" name="favorites" onclick="onlyFavorites()" >
                 <label for="favorites">Only favorites</label>
 
             </form>
-            <ul class="teacher-list">
+
+            <ul id="teacherList" class="teacher-list">
 
                 <li class="person-info favorite">
                     <figure class="person">
@@ -274,7 +276,7 @@
                 </li>
                 <li class="favorite">
                     <figure class="person">
-                        <div class="img-wrapper" src="img/teacher3.png">
+                        <div class="img-wrapper" >
                            J.B
                         </div>
                         <figcaption>John <br>Burke</figcaption>
@@ -319,7 +321,7 @@
                 </li>
                 <li class="favorite">
                     <figure class="person">
-                        <div class="img-wrapper" >
+                        <div class="img-wrapper">
                             J.B
                         </div>
                         <figcaption>John <br>Burke</figcaption>
@@ -689,15 +691,15 @@
     </div>
     <div class="pic-disc">
         <div class="pic">
-            <img class="img-card" src="img/teacher2.png" alt="teacher-pic">
+            <img id="modalPic" class="img-card" src="img/teacher2.png" alt="teacher-pic">
         </div>
         <div class="disc">
-            <h2 class="name">Ihor Tkachuk</h2>
-            <p id="job">Chemistry</p>
-            <p id="live">Kiev, Ukraine</p>
-            <p>35, Male</p>
-            <p><a href="mailto:ihor_tkachuk@domain.com">ihor_tkachuk@domain.com</a></p>
-            <p id="number">+380964993252</p>
+            <h2 id="modalTeacherName" class="name">Ihor Tkachuk</h2>
+            <p id="modalTeacherJob">Chemistry</p>
+            <p id="modalTeacherLive">Kiev, Ukraine</p>
+            <p id="modalTeacherAge"> 35, Male</p>
+            <p id="modalTeacherEmail"><a href="mailto:ihor_tkachuk@domain.com">ihor_tkachuk@domain.com</a></p>
+            <p id="modalTeacherNumber">+380964993252</p>
         </div>
     </div>
     <p class="comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqunderit in sed do eiusmod tempor incididunt. </p>
@@ -728,7 +730,50 @@
         document.getElementsByClassName("add-popup-active")[0].className = 'add-popup';
         document.getElementsByClassName("main-wrapper-active")[0].className = 'main-wrapper';
     }
+    function onlyFavorites(){
+        let teachers = document.getElementsByClassName("person-info");
+        for (let teacher of teachers) {
+            if(teacher.className!=="person-info favorite"){
+                if(document.getElementsByClassName("favorites")[0].checked === false){
+                    if(teacher.getElementsByClassName("img").length===0){
+                        if(document.getElementsByClassName("with-photo")[0].checked === false){
+                            teacher.hidden = false;
+                        }
+                    }
+                    else{
+                        teacher.hidden = false;
+                    }
+                }
+                else{
+                    teacher.hidden = true;
+                }
+            }
+        }
+    }
 
+
+
+    function onlyWithPhoto(){
+        let teachers = document.getElementsByClassName("person-info");
+        for (let teacher of teachers) {
+            if(teacher.getElementsByClassName("img").length===0){
+                if(document.getElementsByClassName("with-photo")[0].checked === false){
+                    if(teacher.className!=="person-info favorite"){
+                        if(document.getElementsByClassName("favorites")[0].checked === false){
+                            teacher.hidden = false;
+                        }
+                    }
+                    else{
+                        teacher.hidden = false;
+                    }
+                }
+                else{
+                    teacher.hidden = true;
+                }
+            }
+        }
+    }
 </script>
+<script src="test.js" type="module"></script>
 </body>
 </html>

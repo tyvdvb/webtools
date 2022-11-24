@@ -428,10 +428,6 @@ footer {
     color: #7d66ff;
 }
 
-footer a:hover {
-    color: #001665;
-}
-
 
 /******************POPUPS*********************/
 
@@ -1581,7 +1577,6 @@ footer a:hover {
         width: 230px;
         height: 160px;
     }
-
 
     #closer2 {
         display: block;
